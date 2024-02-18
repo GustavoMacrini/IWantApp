@@ -1,10 +1,8 @@
-﻿using IWantApp.Domain.Products;
-using IWantApp.Infra.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
 namespace IWantApp.Endpoints.Employees;
-
+ 
 public class EmployeePost
 {
     public static string Template => "/employees";
@@ -19,7 +17,7 @@ public class EmployeePost
 
         if (!result.Succeeded)
         {
-            return Results.BadRequest(result.Errors.First());
+            return Results.ValidationProblem(result.Errors.ConvertToProblemDetails());
         }
 
         var userClaims = new List<Claim>
