@@ -33,6 +33,6 @@ app.MapMethods(CategoryGetAll.Template, CategoryGetAll.Methods, CategoryGetAll.H
 app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Hendle);
 app.MapMethods(CategoryDelete.Template, CategoryDelete.Methods, CategoryDelete.Hendle);
 app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Hendle);
-
+app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Hendle);
 
 app.Run();
