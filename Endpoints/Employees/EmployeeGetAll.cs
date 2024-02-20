@@ -18,12 +18,12 @@ public class EmployeeGetAll
             rows > 5 ? "Rows needs to be equal or less than 5" : null
         };
         
-        var errosFiltered = errors.Where(erro => erro != null).ToList();        
-        if (!errosFiltered.IsNullOrEmpty())
+        var errorsFiltered = errors.Where(error => error != null).ToList();        
+        if (!errorsFiltered.IsNullOrEmpty())
         {
-            return Results.BadRequest(errosFiltered);
+            return Results.BadRequest(errorsFiltered);
         }
-
+         
         return Results.Ok(query.Execute(page.Value, rows.Value));
     }
     

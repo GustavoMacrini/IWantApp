@@ -1,5 +1,6 @@
 using IWantApp.Endpoints.Categories;
 using IWantApp.Endpoints.Employees;
+using IWantApp.Endpoints.Security;
 using IWantApp.Infra.Data;
 using Microsoft.AspNetCore.Identity;
 
@@ -35,5 +36,6 @@ app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Hendle);
 app.MapMethods(CategoryDelete.Template, CategoryDelete.Methods, CategoryDelete.Hendle);
 app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Hendle);
 app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Hendle);
+app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Hendle);
 
 app.Run();
