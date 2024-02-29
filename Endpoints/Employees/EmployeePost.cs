@@ -33,8 +33,6 @@ public class EmployeePost
             return Results.BadRequest(result.Errors.First());
         }
 
-      
-
         return Results.Created($"/employees/{user.Id}", user.Id);
     }
 }
