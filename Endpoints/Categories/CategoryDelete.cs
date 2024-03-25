@@ -1,7 +1,4 @@
-﻿using IWantApp.Infra.Data;
-using Microsoft.AspNetCore.Mvc;
-
-namespace IWantApp.Endpoints.Categories;
+﻿namespace IWantApp.Endpoints.Categories;
 
 public class CategoryDelete
 {
