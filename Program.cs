@@ -1,5 +1,6 @@
 using IWantApp.Endpoints.Categories;
 using IWantApp.Endpoints.Employees;
+using IWantApp.Endpoints.Products;
 using IWantApp.Endpoints.Security;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Data.SqlClient;
@@ -86,6 +87,9 @@ app.MapMethods(CategoryDelete.Template, CategoryDelete.Methods, CategoryDelete.H
 app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Hendle);
 app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Hendle);
 app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Hendle);
+app.MapMethods(ProductPost.Template, ProductPost.Methods, ProductPost.Hendle);
+app.MapMethods(ProductGetAll.Template, ProductGetAll.Methods, ProductGetAll.Hendle);
+app.MapMethods(ProductGetById.Template, ProductGetById.Methods, ProductGetById.Hendle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
@@ -99,8 +103,8 @@ app.Map("/error", (HttpContext http) =>
             return Results.Problem(title: "Database out", statusCode: 500);
         }
     }
-
-    return Results.Problem(title: "An error ocurred", statusCode: 500);
+    
+    return Results.Problem(title: $"An error ocurred:{error.Message}", statusCode: 500);
 });
 
 app.Run();
