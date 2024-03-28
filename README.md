@@ -63,9 +63,9 @@ Para gerar o token seguir Endpoint POST.
 **REQUEST**
 ```json
 {
-  "name": "João",
-  "email": "joao@gmail.com",
-  "senha": "123",
+  "Name": "João",
+  "Email": "joao@gmail.com",
+  "Password": "123",
   "EmployeeCode": "022"
 }
 ```
@@ -75,9 +75,9 @@ Para gerar o token seguir Endpoint POST.
 **RESPONSE**
 ```json
 {
-  "id": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
-  "name": "Tech",
-  "active": true
+  "Id": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
+  "Name": "Tech",
+  "Active": true
 }
 ```
 
@@ -86,7 +86,7 @@ Para gerar o token seguir Endpoint POST.
 **REQUEST**
 ```json
 {
-  "name": "Tech"
+  "Name": "Tech"
 }
 ```
 
@@ -95,8 +95,8 @@ Para gerar o token seguir Endpoint POST.
 **REQUEST**
 ```json
 {
-  "name": "SmartPhone",
-  "active": false
+  "Name": "SmartPhone",
+  "Active": false
 }
 ```
 
@@ -114,9 +114,9 @@ Para gerar o token seguir Endpoint POST.
 **REQUEST**
 ```json
 {
-  "name": "Iphone 15",
-  "description": "Good mobile with a great camera",
-  "categoryId": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
+  "Name": "Iphone 15",
+  "Description": "Good mobile with a great camera",
+  "CategoryId": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
   "HasStock": true,
   "Price": 5000
 }
