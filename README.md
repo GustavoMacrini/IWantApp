@@ -21,7 +21,7 @@
 | <kbd>POST /categories</kbd>     | Adiciona uma nova categoria [response details](#get-categories-detail)
 | <kbd>PUT /categories/{id}</kbd>     | Altera registro de categoria com base no Id [response details](#get-categories-detail)
 | <kbd>DELETE /categories/{Id}</kbd>     | Deleta categoria com base no Id [response details](#get-categories-detail)
-| <kbd>GET /products/{Id}</kbd>     | Retorna uma lista de produtos [response details](#get-products-detail)
+| <kbd>GET /products</kbd>     | Retorna uma lista de produtos [response details](#get-products-detail)
 | <kbd>GET /products/showcase</kbd>     | Retorna uma lista de produtos, permite requisição anônima [response details](#get-products-detail)
 | <kbd>POST /products</kbd>     | Adiciona um novo registro de produto [response details](#get-products-detail)
 
