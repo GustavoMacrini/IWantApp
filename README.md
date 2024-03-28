@@ -116,7 +116,7 @@ Para gerar o token seguir Endpoint POST.
 ```json
 {
   "name": "Iphone 15",
-  "description": "Good mobile with a freat camera",
+  "description": "Good mobile with a great camera",
   "categoryId": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
   "HasStock": true,
   "Price": 5000
