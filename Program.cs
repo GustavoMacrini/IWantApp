@@ -95,6 +95,7 @@ app.MapMethods(ProductGetAll.Template, ProductGetAll.Methods, ProductGetAll.Hend
 app.MapMethods(ProductGetById.Template, ProductGetById.Methods, ProductGetById.Hendle);
 app.MapMethods(ProductGetShowcase.Template, ProductGetShowcase.Methods, ProductGetShowcase.Hendle);
 app.MapMethods(ClientPost.Template, ClientPost.Methods, ClientPost.Hendle);
+app.MapMethods(ClientGet.Template, ClientGet.Methods, ClientGet.Hendle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
