@@ -15,12 +15,15 @@
 | Rota               | Descrição                                          
 |----------------------|-----------------------------------------------------
 | <kbd>POST /token</kbd>     | Gera um token para acesso aos Endpoints [response details](#get-token-detail)
-| <kbd>GET /employees</kbd>     | Retorna uma lista dos funcionários registrados [response details](#get-auth-detail)
-| <kbd>POST /employees</kbd>     | Adiciona um nov funcionário [response details](#get-auth-detail)
+| <kbd>GET /employees</kbd>     | Retorna uma lista dos funcionários registrados [response details](#get-employee-detail)
+| <kbd>POST /employees</kbd>     | Adiciona um novo funcionário [response details](#get-employee-detail)
 | <kbd>GET /categories</kbd>     | Retorna uma lista das categorias registradas [response details](#get-categories-detail)
 | <kbd>POST /categories</kbd>     | Adiciona uma nova categoria [response details](#get-categories-detail)
-| <kbd>PUT /categories</kbd>     | Altera registro de categoria [response details](#get-categories-detail)
+| <kbd>PUT /categories/{id}</kbd>     | Altera registro de categoria com base no Id [response details](#get-categories-detail)
 | <kbd>DELETE /categories/{Id}</kbd>     | Deleta categoria com base no Id [response details](#get-categories-detail)
+| <kbd>GET /products/{Id}</kbd>     | Retorna uma lista de produtos [response details](#get-products-detail)
+| <kbd>GET /products/showcase</kbd>     | Retorna uma lista de produtos, permite requisição anônima [response details](#get-products-detail)
+| <kbd>POST /products</kbd>     | Adiciona um novo registro de produto [response details](#get-products-detail)
 
 
 
@@ -58,16 +61,16 @@ Para gerar o token seguir Endpoint POST.
 }
 ```
 
-<h3 id="get-categories-detail">GET /employees</h3>
+<h3 id="get-employee-detail">GET /employees</h3>
 
-**Params**
+**PARAMS**
 |Parâmetro | Descrição
 |----------------------|-----------------------------------------------------
 | <kbd>page</kbd>     | Qual página de registros retornar
 | <kbd>rows</kbd>     | Quantos registros retornar
 
 
-<h3 id="get-categories-detail">POST /employees</h3>
+<h3 id="get-employee-detail">POST /employees</h3>
 
 **REQUEST**
 ```json
@@ -98,6 +101,27 @@ Para gerar o token seguir Endpoint POST.
 }
 ```
 
+<h3 id="get-products-detail">GET /products/showcase</h3>
+
+**PARAMS**
+|Parâmetro | Descrição
+|----------------------|-----------------------------------------------------
+| <kbd>page</kbd>     | Qual página de registros retornar
+| <kbd>rows</kbd>     | Quantos registros retornar
+
+
+<h3 id="get-products-detail">POST /products</h3>
+
+**REQUEST**
+```json
+{
+  "name": "Iphone 15",
+  "description": "Good mobile with a freat camera",
+  "categoryId": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
+  "HasStock": true,
+  "Price": 5000
+}
+```
 
 
 <h4 align="center"> Projeto em Desenvolvimento </h4>
