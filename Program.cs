@@ -1,4 +1,6 @@
+using IWantApp.Domain.Users;
 using IWantApp.Endpoints.Categories;
+using IWantApp.Endpoints.Clients;
 using IWantApp.Endpoints.Employees;
 using IWantApp.Endpoints.Products;
 using IWantApp.Endpoints.Security;
@@ -34,6 +36,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     options.Password.RequiredLength = 3;
 }).AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddScoped<QueryAllUsersWithClaimName>();
+builder.Services.AddScoped<UserCreator>();
 
 builder.Services.AddAuthorization(options =>
 {
@@ -91,7 +94,7 @@ app.MapMethods(ProductPost.Template, ProductPost.Methods, ProductPost.Hendle);
 app.MapMethods(ProductGetAll.Template, ProductGetAll.Methods, ProductGetAll.Hendle);
 app.MapMethods(ProductGetById.Template, ProductGetById.Methods, ProductGetById.Hendle);
 app.MapMethods(ProductGetShowcase.Template, ProductGetShowcase.Methods, ProductGetShowcase.Hendle);
-
+app.MapMethods(ClientPost.Template, ClientPost.Methods, ClientPost.Hendle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
