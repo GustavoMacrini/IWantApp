@@ -16,7 +16,7 @@ public class ProductGetById
             return Results.NotFound();
         }
 
-        var result = new ProductResponse(product.Name, product.Category.Name, product.Description, product.HasStock, product.Active);        
+        var result = new ProductResponse(product.Name, product.Category.Name, product.Description, product.HasStock, product.Price, product.Active);        
         return Results.Ok(result);
     }
 }
