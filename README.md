@@ -49,18 +49,6 @@ Para gerar o token seguir Endpoint POST.
 }
 ```
 
-
-<h3 id="get-categories-detail">GET /categories</h3>
-
-**RESPONSE**
-```json
-{
-  "id": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
-  "name": "Tech",
-  "active": true
-}
-```
-
 <h3 id="get-employee-detail">GET /employees</h3>
 
 **PARAMS**
@@ -79,6 +67,17 @@ Para gerar o token seguir Endpoint POST.
   "email": "joao@gmail.com",
   "senha": "123",
   "EmployeeCode": "022"
+}
+```
+
+<h3 id="get-categories-detail">GET /categories</h3>
+
+**RESPONSE**
+```json
+{
+  "id": "a960b778-aebc-49e8-ad6c-0f5d35a1154a",
+  "name": "Tech",
+  "active": true
 }
 ```
 
