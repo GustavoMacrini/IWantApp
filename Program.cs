@@ -37,6 +37,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     options.Password.RequiredLength = 3;
 }).AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddScoped<QueryAllUsersWithClaimName>();
+builder.Services.AddScoped<QueryAllProductsSold>();
 builder.Services.AddScoped<UserCreator>();
 
 builder.Services.AddAuthorization(options =>
@@ -87,7 +88,6 @@ app.UseHttpsRedirection();
 app.MapMethods(CategoryPost.Template, CategoryPost.Methods, CategoryPost.Hendle);
 app.MapMethods(CategoryGetAll.Template, CategoryGetAll.Methods, CategoryGetAll.Hendle);
 app.MapMethods(CategoryPut.Template, CategoryPut.Methods, CategoryPut.Hendle);
-app.MapMethods(CategoryDelete.Template, CategoryDelete.Methods, CategoryDelete.Hendle);
 app.MapMethods(EmployeePost.Template, EmployeePost.Methods, EmployeePost.Hendle);
 app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Hendle);
 app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Hendle);
@@ -98,6 +98,8 @@ app.MapMethods(ProductGetShowcase.Template, ProductGetShowcase.Methods, ProductG
 app.MapMethods(ClientPost.Template, ClientPost.Methods, ClientPost.Hendle);
 app.MapMethods(ClientGet.Template, ClientGet.Methods, ClientGet.Hendle);
 app.MapMethods(OrderPost.Template, OrderPost.Methods, OrderPost.Hendle);
+app.MapMethods(OrderGet.Template, OrderGet.Methods, OrderGet.Hendle);
+app.MapMethods(ProductSoldGet.Template, ProductSoldGet.Methods, ProductSoldGet.Hendle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
