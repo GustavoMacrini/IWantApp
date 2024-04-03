@@ -22,8 +22,10 @@
 | <kbd>PUT /categories/{id}</kbd>     | Altera registro de categoria com base no Id [request details](#put-categories-detail)
 | <kbd>GET /products</kbd>     | Retorna uma lista de produtos [response details](#get-products-detail)
 | <kbd>GET /products/showcase</kbd>     | Retorna uma lista de produtos, permite requisição anônima [response details](#get-productsShowcase-detail)
+| <kbd>GET /products/sold</kbd>     | Retorna um relatório de produtos mais vendidos [response details](#get-products-sold-detail)
 | <kbd>POST /products</kbd>     | Adiciona um novo registro de produto [request details](#post-products-detail)
 | <kbd>POST /orders</kbd>     | Adiciona um novo registro de pedido [request details](#post-order-detail)
+| <kbd>GET /orders/{id}</kbd>     | Retorna uma lista [response details](#get-order-detail)
 
 
 
@@ -158,6 +160,38 @@ Para gerar o token seguir Endpoint POST.
 ]
 ```
 
+<h3 id="get-products-sold-detail">GET /products/sold</h3>
+
+**PARAMS**
+|Parâmetro | Descrição
+|----------------------|-----------------------------------------------------
+| <kbd>page</kbd>     | Qual página de registros retornar
+| <kbd>rows</kbd>     | Quantos registros retornar
+
+**RESPONSE**
+```json
+[
+    {
+        "id": "93f2dec2-87c7-4725-bc99-0e9ba8bce166",
+        "name": "Iphone 15",
+        "price": 2000.00,
+        "amount": 10
+    },
+    {
+        "id": "c3bef498-4404-473f-9f54-498af160c085",
+        "name": "S19+",
+        "price": 1000.00,
+        "amount": 10
+    },
+    {
+        "id": "097b5f66-4fba-4d76-88b0-d057986f87ca",
+        "name": "Mi 12 pro+",
+        "price": 4000.00,
+        "amount": 4
+    }
+]
+```
+
 <h3 id="post-products-detail">POST /products</h3>
 
 **REQUEST**
@@ -182,6 +216,28 @@ Para gerar o token seguir Endpoint POST.
     "097b5f66-4fba-4d76-88b0-d057986f87ca"],
 
 "deliveryAddress": "Rua principal, 01"
+}
+```
+
+<h3 id="get-order-detail">GET /orders/{id}</h3>
+
+**RESPONSE**
+```json
+{
+    "id": "80daccda-71c6-459a-ab6f-023002c2987a",
+    "clientName": "Client",
+    "products": [
+        {
+            "id": "93f2dec2-87c7-4725-bc99-0e9ba8bce166",
+            "name": "Iphone 15"
+        },
+        {
+            "id": "c3bef498-4404-473f-9f54-498af160c085",
+            "name": "S19+"
+        }
+    ],
+    "total": 3000.00,
+    "deliveryAddress": "Rua principal"
 }
 ```
 
