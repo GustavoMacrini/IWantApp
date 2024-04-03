@@ -242,4 +242,4 @@ Para gerar o token seguir Endpoint POST.
 ```
 
 
-<h4 align="center"> Projeto em Desenvolvimento </h4>
+<h4 align="center"> Projeto Finalizado </h4>
